@@ -1,38 +1,23 @@
-.App {
-  text-align: center;
+@font-face {
+    font-family: "valorant";
+    src: url(ValorantFont.ttf);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+    display: flex;
+    justify-content: space-between;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.btn{
+    height: 100px;
+    width: 200px;
+    font-family: "valorant",sans-serif;
+    background-color: #e83746;
+    color: white;
+    border: 5px solid #101823;
+    
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.div2{
+    display: flex;
 }
