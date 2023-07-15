@@ -3,8 +3,8 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## About the project
-- Valorant uuid finder
-- uuid is the unique id for every item in Valorant
+- Valorant UUID finder
+- UUID is the unique id for every item in Valorant
 - This website helps you to find UUIDs of the following Valorant items:-
   - Agents
   - Weapons
