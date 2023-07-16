@@ -1,9 +1,10 @@
 import React from "react"
 import Search from "./Search"
+import "./Searchresults.css"
 
 function Searchresults(results , setfinal){
     const items = results.results
-    return <div>
+    return <div className="results-list">
         {console.log(items)}
         
         {items.map(function(i,key){

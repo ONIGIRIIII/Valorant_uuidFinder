@@ -1,6 +1,7 @@
 import { useState } from "react";
 import SearchBar from "./Seachbar";
 import Searchresults from "./Searchresults";
+import img1 from "./222.png"
 import "./App.css"
 
 
@@ -10,26 +11,33 @@ function App() {
   const [results,setresults] = useState([])
   
   return (
+    <div className="body">
     <div className="App">
       <Logo/>
+      <div className="container1">
       <Select setselected={setselected} setdata={setdata}/>
       {selected && <Form data={data} setresults={setresults} results={results} />}
+      </div>
+    </div>
     </div>
   );
 }
 
 function Logo(){
-  return <div>
-    <h1>VALORANT</h1>
-  </div>
+return <div>
+  <img className="image" src={img1} alt="valorant"/>
+</div>  
+
 }
 function Select({setselected,setdata}){
-  return <div className="container">
+  return<div className="main-container"> 
+  <div className="container">
     <Agents setselected={setselected} setdata={setdata}/>
     <Weapons setselected={setselected} setdata={setdata}/>
     <GameModes setselected={setselected} setdata={setdata}/>
     <Bundles setselected={setselected} setdata={setdata}/>
     <Maps setselected={setselected} setdata={setdata}/>
+  </div>
   </div>
 }
 
@@ -130,7 +138,7 @@ function Maps({setselected,setdata}){
 function Form({data,setresults,results}){
   console.log(results.length)
   return <div className="div2">
-    <div>
+    <div className="div2-2">
     <SearchBar data={data} setresults={setresults}/>
     <Searchresults results={results}  />
     </div>
@@ -141,10 +149,12 @@ function Form({data,setresults,results}){
 
 function Info({final}){
   console.log(final)
-  return <div>
-    <h1>{final[0].displayName}</h1>
-    <h1>{final[0].uuid}</h1>
-    <img src={final[0].displayIcon} alt={final[0].displayName}/>
+  return <div className="div3">
+    <img className="img" src={final[0].displayIcon} alt={final[0].displayName}/>
+    {/* <h1 className="info">Name</h1> */}<br></br>
+    <h2 className="info">Name:{final[0].displayName}</h2>
+    {/* <h1 className="info">UUID</h1> */}<br></br>
+    <h2 className="info">UUID:{final[0].uuid}</h2>
     </div>
 }
 

@@ -1,6 +1,7 @@
 import React from "react";
 import {FaSearch} from "react-icons/fa"
 import { useState } from "react";
+import "./Searchbar.css"
 
 
 function SearchBar({data,setresults,setfinal}){
@@ -18,12 +19,12 @@ function SearchBar({data,setresults,setfinal}){
         fetchData(value,data)
     }
 
-    return <div>
-        <FaSearch/>
-        <input placeholder="search"
+    return <div className="input-wrapper">
+        <FaSearch id="search-icon"/>
+        <input placeholder="Type the Name ..."
          value={text} 
          onChange={(e) => handleChange(e.target.value)}></input>
-         
+         <button onClick={(e) => handleChange("")} className="clear">CLEAR</button>
         </div>
 }
 

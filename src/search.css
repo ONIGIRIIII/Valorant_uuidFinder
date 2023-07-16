@@ -1,0 +1,18 @@
+@font-face {
+    font-family: "valorant";
+    src: url(ValorantFont.ttf);
+}
+
+
+.search{
+    padding: 10px 20px;
+}
+
+.search:hover{
+    background-color: #efefef;
+}
+
+.textname{
+    font-family: "valorant" ,sans-serif;
+    text-align: center;
+}
